@@ -18,10 +18,10 @@ class Follower(Base):
 class User(Base):
     __tablename__ = 'User'
     id =  Column(Integer, primary_key=True)
-    username = Column(String(250))
+    username = Column(String(250), unique=True)
     firstname = Column(String(250))
     lastname = Column(String(250))
-    email = Column(String(250))
+    email = Column(String(250), unique=True)
         
 class Media(Base):
     __tablename__ = 'Media'
